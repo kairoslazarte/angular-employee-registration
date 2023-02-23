@@ -1,0 +1,44 @@
+{
+  "name": "online-registration",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false"
+  },
+  "author": "Fillip Kairos Lazarte",
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.4",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "html-webpack-inline-source-plugin": "^1.0.0-beta.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.7.5",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-scripts": "^5.0.1",
+    "require-at": "^1.0.6",
+    "toidentifier": "^1.0.1",
+    "undefsafe": "^2.0.5",
+    "update-notifier": "^5.1.0",
+    "xoauth2": "^1.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}

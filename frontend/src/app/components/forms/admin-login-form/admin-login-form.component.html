@@ -1,0 +1,53 @@
+<div class="w-full max-w-md mx-auto w-full my-auto py-40">
+    <div>
+        <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+            Sign in as Admin
+        </h2>
+    </div>
+    <form #adminLogin="ngForm" id="admin-login-form" (ngSubmit)="loginAdminForm(adminLogin.value)" class="mt-4 space-y-6">
+        <div class="flex flex-col space-y-4 rounded-md shadow-sm relative">
+            <div class="pt-5">
+                <label htmlFor="email-address" class="sr-only">
+                    Email address
+                </label>
+                <input
+                    id="email-address"
+                    name="email"
+                    type="email"
+                    ngModel
+                    autoComplete="email"
+                    required
+                    class="relative block w-full appearance-none rounded-md border px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-green-700 focus:outline-none focus:ring-greenborder-green-700 sm:text-sm border-gray-300"
+                    placeholder="Email address"
+                />
+            </div>
+            <div>
+                <label htmlFor="password" class="sr-only">
+                    Password
+                </label>
+                <input
+                id="password"
+                    name="password"
+                    ngModel
+                    type="password"
+                    autoComplete="current-password"
+                    required
+                    
+                    class="relative block w-full appearance-none rounded-md border px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-green-700 focus:outline-none focus:ring-greenborder-green-700 sm:text-sm border-gray-300"
+                    placeholder="Password"
+                />
+            </div>
+        </div>
+
+        <div class="pt-3">
+            <button
+                type="submit"
+                class="group relative flex w-full justify-center rounded-md border border-transparent bg-yellow-400 py-2 px-4 text-sm font-medium text-white hover:bg-yellow-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-greenborder-green-700 focus:ring-offset-2"
+            >
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                </span>
+                Login
+            </button>
+        </div>
+    </form>
+</div>
